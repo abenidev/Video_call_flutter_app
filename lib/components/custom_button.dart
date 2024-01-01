@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:video_chat_app/constants/colors.dart';
 
 class CustomButton extends StatelessWidget {
   final String label;
@@ -13,14 +12,14 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: buttonColor,
+          // backgroundColor: buttonColor,
           minimumSize: const Size(
             double.infinity,
             50,
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
-            side: const BorderSide(color: buttonColor),
+            // side: const BorderSide(color: buttonColor),
           ),
         ),
         child: Text(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:video_chat_app/constants/colors.dart';
 
 class HomeMeetingButton extends StatelessWidget {
   const HomeMeetingButton({super.key, required this.onPressed, required this.icon, required this.label});
@@ -15,7 +14,8 @@ class HomeMeetingButton extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: buttonColor,
+              // color: buttonColor,
+              color: Theme.of(context).primaryColor,
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(

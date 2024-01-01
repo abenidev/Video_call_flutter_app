@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:video_chat_app/components/custom_button.dart';
-import 'package:video_chat_app/constants/colors.dart';
 import 'package:video_chat_app/resources/auth_methods.dart';
 import 'package:video_chat_app/screens/meeting_history_screen.dart';
 import 'package:video_chat_app/screens/meeting_screen.dart';
@@ -24,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> pages = [
     const MeetingScreen(),
     const MeetingHistoryScreen(),
-    const Text('Contacts'),
+    // const Text('Contacts'),
     //setting
     CustomButton(label: "Log out", onPressed: () => AuthMethods().signOut()),
   ];
@@ -36,13 +35,13 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         title: const Text('Meet & Chat'),
         centerTitle: true,
-        backgroundColor: backgroundColor,
+        // backgroundColor: backgroundColor,
       ),
       body: pages[_page],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: footerColor,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey,
+        // backgroundColor: footerColor,
+        // selectedItemColor: Colors.white,
+        // unselectedItemColor: Colors.grey,
         selectedFontSize: 14.0,
         unselectedFontSize: 14.0,
         onTap: onPageChanged,
@@ -57,10 +56,10 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(Icons.lock_clock),
             label: 'Meetings',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Contacts',
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.person_outline),
+          //   label: 'Contacts',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined),
             label: 'Settings',

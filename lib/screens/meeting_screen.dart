@@ -48,7 +48,7 @@ class _MeetingScreenState extends State<MeetingScreen> {
                 createMeeting();
               },
               icon: Icons.videocam,
-              label: 'New Meeting',
+              label: 'Create Meeting',
             ),
             HomeMeetingButton(
               onPressed: () {
@@ -57,23 +57,23 @@ class _MeetingScreenState extends State<MeetingScreen> {
               icon: Icons.add_box_rounded,
               label: 'Join Meeting',
             ),
-            HomeMeetingButton(
-              onPressed: () {},
-              icon: Icons.calendar_today,
-              label: 'Schedule',
-            ),
-            HomeMeetingButton(
-              onPressed: () {},
-              icon: Icons.arrow_upward,
-              label: 'Share Screen',
-            ),
+            // HomeMeetingButton(
+            //   onPressed: () {},
+            //   icon: Icons.calendar_today,
+            //   label: 'Schedule',
+            // ),
+            // HomeMeetingButton(
+            //   onPressed: () {},
+            //   icon: Icons.arrow_upward,
+            //   label: 'Share Screen',
+            // ),
           ],
         ),
         const Expanded(
           child: Center(
             child: Text(
               'Create/Join Meetings with just a tap!',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ),
         ),
