@@ -4,6 +4,7 @@ import 'package:video_chat_app/firebase_options.dart';
 import 'package:video_chat_app/resources/auth_methods.dart';
 import 'package:video_chat_app/screens/home_screen.dart';
 import 'package:video_chat_app/screens/login_screen.dart';
+import 'package:video_chat_app/screens/splash_screen.dart';
 import 'package:video_chat_app/screens/video_call_screen.dart';
 
 Future<void> main() async {
@@ -27,11 +28,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
+        SplashScreen.routeName: (context) => const SplashScreen(),
         LoginScreen.routeName: (context) => const LoginScreen(),
         HomeScreen.routeName: (context) => const HomeScreen(),
         VideoCallScreen.routeName: (context) => const VideoCallScreen(),
       },
-      // initialRoute: LoginScreen.routeName,
+      // initialRoute: SplashScreen.routeName,
       home: StreamBuilder(
         stream: AuthMethods().authChanges,
         builder: (context, snapshot) {

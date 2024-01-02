@@ -50,8 +50,10 @@ class AuthMethods {
   }
 
   void signOut() async {
+    debugPrint('Signing out...');
     try {
       await _auth.signOut();
+      debugPrint('Signing out done!!');
     } catch (e) {
       debugPrint('e: ${e}');
     }
