@@ -19,6 +19,8 @@ class _MeetingScreenState extends State<MeetingScreen> {
   void createMeeting() async {
     var random = Random();
     String roomName = (random.nextInt(100000000) + 10000000).toString();
+    // ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Tex))
+    // showSnackBar(context, 'Room Id: ${roomName}');
     _jitsiMeetMethods.createNewMeeting(
       roomName: roomName,
       isAudioMuted: true,

@@ -22,7 +22,7 @@ class JitsiMeetMethods {
         configOverrides: {
           "startWithAudioMuted": isAudioMuted,
           "startWithVideoMuted": isVideoMuted,
-          "subject": "Video Meeting",
+          "subject": "Room Id: $roomName",
         },
         featureFlags: {"unsaferoomwarning.enabled": false},
         userInfo: JitsiMeetUserInfo(
@@ -36,5 +36,28 @@ class JitsiMeetMethods {
     } catch (e) {
       debugPrint('e: ${e}');
     }
+
+    // JitsiMeetEventListener listener = JitsiMeetEventListener(
+    JitsiMeetEventListener(
+      conferenceJoined: (url) {
+        debugPrint("conferenceJoined: url: $url");
+      },
+      participantJoined: (email, name, role, participantId) {
+        debugPrint(
+          "participantJoined: email: $email, name: $name, role: $role, "
+          "participantId: $participantId",
+        );
+        // participants.add(participantId!);
+      },
+      chatMessageReceived: (senderId, message, isPrivate, timestamp) {
+        debugPrint(
+          "chatMessageReceived: senderId: $senderId, message: $message, "
+          "isPrivate: $isPrivate",
+        );
+      },
+      readyToClose: () {
+        debugPrint("readyToClose");
+      },
+    );
   }
 }
